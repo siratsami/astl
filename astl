@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# choosing multiple file
+CATF1=$(cat $1)
+CATF2=$(cat $2)
+
+combine()
+{
+        set $CATF2
+        for i in $CATF1; do
+        echo "$i":"$1"
+        shift
+        done
+}
+
+combine
+
+# you can change : to any other word or string
